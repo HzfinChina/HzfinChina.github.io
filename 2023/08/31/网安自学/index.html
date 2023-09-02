@@ -28,7 +28,7 @@
 <meta property="og:description" content="前置知识   掌握操作系统使用    熟练重装系统    什么是web网站？  https:&#x2F;&#x2F;baike.baidu.com&#x2F;item&#x2F;web&#x2F;150564     HTML&#x2F;CSS&#x2F;JS  https:&#x2F;&#x2F;www.w3schools.com&#x2F;  https:&#x2F;&#x2F;developer.mozilla.org&#x2F;zh-CN&#x2F;docs&#x2F;Web  https:&#x2F;&#x2F;www.runoob.">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-08-31T09:41:31.000Z">
-<meta property="article:modified_time" content="2023-09-02T13:42:49.606Z">
+<meta property="article:modified_time" content="2023-09-02T14:14:42.866Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 
@@ -180,7 +180,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-09-02 21:42:49" itemprop="dateModified" datetime="2023-09-02T21:42:49+08:00">2023-09-02</time>
+                <time title="Modified: 2023-09-02 22:14:42" itemprop="dateModified" datetime="2023-09-02T22:14:42+08:00">2023-09-02</time>
               </span>
 
           
@@ -329,8 +329,13 @@ HTTP协议</p>
 </ol>
 <p>优先级从上到下</p>
 </li>
-<li><p><input disabled="" type="checkbox"> 
-ARP</p>
+<li><p><input checked="" disabled="" type="checkbox"> 
+ARP: Address Resolution Protocol</p>
+<p>把IP地址映射到MAC地址</p>
+<p>在局域网中很有用。比如PC1要向PC2发送一个包，但是只知道PC2的IP，还需要PC2的mac地址。现在PC1在局域网中广播一个查询的请求，谁是有PC2的IP，这时PC2返回自己的mac包。然后PC1收到后存到本机的arp缓存中。用arp -a查看</p>
+<p>小知识点：以太网怎么广播：设置数据包的mac地址为广播地址（ffff.ffff.ffff)或三层封装时目标ip是(255.255.255.255)，广播消息只会在同一局域网中广播，不会在广域网中广播</p>
+<p>形式：一问一答，问是广播，答是单播</p>
+<p>实验：ping同一局域网中IP为192.168.1.102的主机，用wireshark抓包</p>
 </li>
 <li><p><input disabled="" type="checkbox"> 
 DHCP</p>
