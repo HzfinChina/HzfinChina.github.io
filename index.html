@@ -176,7 +176,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-09-01 02:45:18" itemprop="dateModified" datetime="2023-09-01T02:45:18+08:00">2023-09-01</time>
+                <time title="Modified: 2023-09-02 21:42:49" itemprop="dateModified" datetime="2023-09-02T21:42:49+08:00">2023-09-02</time>
               </span>
 
           
@@ -297,7 +297,7 @@ Docker（了解原理，日常使用无障碍）</p>
 </li>
 <li><p>1代表当前对应的ip地址是网络位，0代表当前对应的ip地址位是主机位</p>
 </li>
-<li><p><input disabled="" type="checkbox"> 
+<li><p><input checked="" disabled="" type="checkbox"> 
 HTTP协议</p>
 <ul>
 <li><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP">超文本传输协议（HTTP）</a></p>
@@ -305,6 +305,25 @@ HTTP协议</p>
 <li><p><a target="_blank" rel="noopener" href="https://www.runoob.com/http/http-tutorial.html">HTTP 教程</a></p>
 </li>
 </ul>
+<p>HTTP连接管理</p>
+<ul>
+<li>长连接：keep-alive，建立一个TCP连接后传输不止一个HTTP请求，缺点：在承受DOS攻击时更脆弱</li>
+</ul>
+<p>数据压缩：对于文本之类的来说，压缩比率高达70%，大大减少对带宽的需求</p>
+<p>端到端压缩：</p>
+<ul>
+<li>对于文本文件，现在用的最多的是gzip</li>
+<li>为了选择压缩算法，浏览器向服务器发送Accept-Encoding，服务器选择一种进行压缩，并发送Content-Encoding</li>
+</ul>
+<p>Cookie:用户浏览器保存在本地的数据，每次向同一服务器请求时带上cookie</p>
+<p>重定向：返回状态码为3开头的</p>
+<p>两种方法重定向：</p>
+<ol>
+<li>直接在http上设置重定向，如在nginx中写redirect 301</li>
+<li>html中meta直接定义</li>
+<li>js中设置window.location &#x3D; ‘url’</li>
+</ol>
+<p>优先级从上到下</p>
 </li>
 <li><p><input disabled="" type="checkbox"> 
 ARP</p>
