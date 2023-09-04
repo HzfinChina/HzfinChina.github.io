@@ -28,7 +28,7 @@
 <meta property="og:description" content="前置知识   掌握操作系统使用    熟练重装系统    什么是web网站？  https:&#x2F;&#x2F;baike.baidu.com&#x2F;item&#x2F;web&#x2F;150564     HTML&#x2F;CSS&#x2F;JS  https:&#x2F;&#x2F;www.w3schools.com&#x2F;  https:&#x2F;&#x2F;developer.mozilla.org&#x2F;zh-CN&#x2F;docs&#x2F;Web  https:&#x2F;&#x2F;www.runoob.">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-08-31T09:41:31.000Z">
-<meta property="article:modified_time" content="2023-09-02T14:14:42.866Z">
+<meta property="article:modified_time" content="2023-09-03T16:38:39.606Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 
@@ -180,7 +180,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-09-02 22:14:42" itemprop="dateModified" datetime="2023-09-02T22:14:42+08:00">2023-09-02</time>
+                <time title="Modified: 2023-09-04 00:38:39" itemprop="dateModified" datetime="2023-09-04T00:38:39+08:00">2023-09-04</time>
               </span>
 
           
@@ -338,7 +338,17 @@ ARP: Address Resolution Protocol</p>
 <p>实验：ping同一局域网中IP为192.168.1.102的主机，用wireshark抓包</p>
 </li>
 <li><p><input disabled="" type="checkbox"> 
-DHCP</p>
+DHCP：dynamic host configuration protocol</p>
+<p>是一个局域网的网络协议。dhcp服务器（通常是路由器）控制一段IP地址范围，客户机登录时服务器自动获得服务器分配的Ip地址，子网掩码，Gateway地址，dns服务器地址等等</p>
+<p>Server使用端口：67</p>
+<p>Client使用端口：68</p>
+<p>步骤：</p>
+<ol>
+<li>Client端在局域网广播 <strong>DHCP Discover</strong> 包，希望得到DHCP Server回应（提供IP)</li>
+<li>局域网中的某一DHCP Server接收到Client发的Discover包后，发送<strong>DHCP Offer</strong> 给客户端，告诉client”我可以提供IP地址”</li>
+<li>Client收到Offer后，<strong>广播</strong> DHCP Request，目的不仅是让刚刚通讯的Server发IP地址，还有告诉其他DHCP Server自己有Offer了。</li>
+<li>DHCP Server发送 <strong>DHCP ACK</strong> 数据包</li>
+</ol>
 </li>
 <li><p><input disabled="" type="checkbox"> 
 SMB</p>
